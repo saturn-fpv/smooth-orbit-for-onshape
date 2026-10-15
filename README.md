@@ -1,6 +1,6 @@
 # Smooth Orbit for Onshape
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-install-4285F4?logo=googlechrome&logoColor=white)](CHROME_WEB_STORE_URL)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-install-4285F4?logo=googlechrome&logoColor=white)]([CHROME_WEB_STORE_URL](https://chromewebstore.google.com/detail/smooth-orbit-for-onshape/hidlnmolgcpapjcngcjkliiimmanpkke))
 [![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-install-FF7139?logo=firefoxbrowser&logoColor=white)](FIREFOX_ADDONS_URL)
 [![Release](https://img.shields.io/github/v/release/saturn-fpv/smooth-orbit-for-onshape)](https://github.com/saturn-fpv/smooth-orbit-for-onshape/releases/latest)
 [![Build](https://img.shields.io/github/actions/workflow/status/saturn-fpv/smooth-orbit-for-onshape/release.yml)](https://github.com/saturn-fpv/smooth-orbit-for-onshape/actions/workflows/release.yml)
