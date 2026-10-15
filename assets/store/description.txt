@@ -1,0 +1,31 @@
+Orbiting in Onshape moves in small jumps instead of a smooth glide. Smooth Orbit for Onshape fixes that.
+
+WHY ONSHAPE ORBIT FEELS STEPPY
+Onshape rounds mouse movement to whole pixels and rotates the view by a fixed angle per pixel, roughly half a degree on a typical screen. Even when you move the mouse very slowly, the model turns in visible steps. On a large model, a single step can throw the far edges by 10 pixels or more. This is not a frame rate or GPU problem, so better hardware does not fix it.
+
+WHAT THIS EXTENSION DOES
+Smooth Orbit hooks into Onshape's own view rotation and spreads each pixel of mouse movement across several frames as tiny fractional steps. The model glides instead of jumping, while still following your mouse exactly. When you let go, everything settles where it would have anyway, and Onshape's own release inertia still works.
+
+FEATURES
+- Smooth, sub-degree orbiting in Part Studios and Assemblies
+- Adjustable smoothing, from barely there to silky
+- Adjustable orbit sensitivity, slower for precise positioning or faster for quick overviews
+- On/off switch in the toolbar popup
+- Press F8 inside Onshape to toggle it instantly and compare before and after
+- Pan, zoom, selection and everything else stay exactly as Onshape made them
+
+HOW TO USE
+1. Install the extension and reload any open Onshape tab.
+2. Orbit as usual.
+3. Click the toolbar icon to adjust smoothing and sensitivity. The status dot turns green once the extension is active on the tab.
+
+PRIVACY
+Smooth Orbit collects no data, sends nothing anywhere and loads no remote code. It runs only on cad.onshape.com. The only permission it uses is storage, to remember your settings.
+
+GOOD TO KNOW
+The extension works with Onshape's internal view code. If an Onshape update changes that code, the extension simply stops doing anything until it is updated. It cannot break your documents. It only changes how the view moves on your screen and never touches your models.
+
+Made by Saturn FPV, an FPV pilot and drone frame designer who spends a lot of time orbiting models in Onshape.
+saturnfpv.com
+
+Smooth Orbit for Onshape is an independent project and is not affiliated with, endorsed by or sponsored by Onshape or PTC Inc. Onshape is a trademark of PTC Inc.
