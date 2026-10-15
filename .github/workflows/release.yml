@@ -1,0 +1,40 @@
+# Push a tag like v1.0.2 (matching the version in src/manifest.json) and this
+# builds the store zip and attaches it to a GitHub Release for that tag.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check tag matches manifest version
+        run: |
+          v="v$(node -p "require('./src/manifest.json').version")"
+          if [ "$v" != "$GITHUB_REF_NAME" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match manifest version $v"
+            exit 1
+          fi
+
+      - name: Lint
+        run: npx --yes web-ext@10.7.0 lint -s src
+
+      - name: Build
+        run: npx --yes web-ext@10.7.0 build -s src -a dist -n "smooth-orbit-$GITHUB_REF_NAME.zip"
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/*.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes
+          fi

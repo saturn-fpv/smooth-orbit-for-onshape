@@ -36,6 +36,10 @@ npx web-ext lint -s src
 npx web-ext build -s src -a dist
 ```
 
+Release: bump `version` in `src/manifest.json`, commit, then push a matching
+tag (`git tag v1.0.2 && git push origin v1.0.2`). The release workflow builds
+the zip and attaches it to a GitHub Release.
+
 ## Privacy
 
 No data is collected or sent anywhere. The only permission is `storage`, for
