@@ -1,9 +1,13 @@
 # Smooth Orbit for Onshape
 
+[![Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-install-4285F4?logo=googlechrome&logoColor=white)](CHROME_WEB_STORE_URL)
+[![Firefox Add-ons](https://img.shields.io/badge/Firefox_Add--ons-install-FF7139?logo=firefoxbrowser&logoColor=white)](FIREFOX_ADDONS_URL)
+[![Release](https://img.shields.io/github/v/release/saturn-fpv/smooth-orbit-for-onshape)](https://github.com/saturn-fpv/smooth-orbit-for-onshape/releases/latest)
+[![Build](https://img.shields.io/github/actions/workflow/status/saturn-fpv/smooth-orbit-for-onshape/release.yml)](https://github.com/saturn-fpv/smooth-orbit-for-onshape/actions/workflows/release.yml)
+[![License: GPL-3.0](https://img.shields.io/github/license/saturn-fpv/smooth-orbit-for-onshape)](LICENSE)
+
 Browser extension that removes the per-pixel stepping when orbiting in
 [Onshape](https://www.onshape.com), so the view rotates smoothly.
-
-**Install:** [Chrome Web Store](CHROME_WEB_STORE_URL) · [Firefox Add-ons](FIREFOX_ADDONS_URL)
 
 <img src="assets/popup.jpg" alt="Extension popup" width="300">
 
