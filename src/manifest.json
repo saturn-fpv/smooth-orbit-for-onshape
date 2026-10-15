@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Smooth Orbit for Onshape",
+  "short_name": "Smooth Orbit",
+  "version": "1.0.1",
+  "description": "Removes the per-pixel stepping when orbiting in Onshape, so the view rotates smoothly. Adjustable smoothing and sensitivity.",
+  "author": "Saturn FPV",
+  "homepage_url": "https://saturnfpv.com",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Smooth Orbit for Onshape",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://cad.onshape.com/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://cad.onshape.com/*"
+      ],
+      "js": [
+        "main.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smooth-orbit@saturnfpv.com",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}
